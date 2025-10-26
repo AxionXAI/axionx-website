@@ -1,0 +1,20 @@
+# Netlify Redirects for AxionX Website
+
+# Redirect newsletter to Substack
+/newsletter   https://substack.com/@daytodayai   301
+
+# Redirect book/call to contact page
+/book         /contact.html                      301
+/call         /contact.html                      301
+
+# Handle clean URLs (optional - remove .html extension)
+/about        /about.html                        200
+/services     /services.html                     200
+/contact      /contact.html                      200
+/logos        /logo-mockups.html                 200
+
+# Redirect www to non-www
+https://www.axionx.uk/*  https://axionx.uk/:splat  301!
+
+# 404 fallback
+/*            /index.html                        404

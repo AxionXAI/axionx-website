@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AxionX Logo Mockups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #F9FAFB;
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #6B46C1 0%, #4F46E5 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 4rem;
+            font-size: 1.125rem;
+        }
+
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .mockup-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .mockup-card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .mockup-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #6B7280;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .logo-display.gradient {
+            background: linear-gradient(135deg, #6B46C1 0%, #4F46E5 50%, #3B82F6 100%);
+        }
+
+        .logo-display.white {
+            background: white;
+            border: 2px solid #E5E7EB;
+        }
+
+        .logo-display.dark {
+            background: #1F2937;
+        }
+
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        /* Variation 1: Original Style */
+        .var1 .logo-text {
+            background: linear-gradient(135deg, #6B46C1 0%, #4F46E5 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .var1 .logo-tagline {
+            color: #6B7280;
+        }
+
+        /* Variation 2: White on Gradient */
+        .var2 .logo-text {
+            color: white;
+        }
+
+        .var2 .logo-tagline {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Variation 3: All Caps */
+        .var3 .logo-text {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #6B46C1 0%, #4F46E5 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.1em;
+        }
+
+        .var3 .logo-tagline {
+            color: #6B7280;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+        }
+
+        /* Variation 4: With Icon */
+        .var4 .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .var4 .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6B46C1 0%, #3B82F6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .var4 .logo-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .var4 .logo-text {
+            font-size: 2.5rem;
+            color: #1F2937;
+        }
+
+        .var4 .logo-tagline {
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+
+        /* Variation 5: Minimalist */
+        .var5 .logo-text {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #1F2937;
+            letter-spacing: 0.05em;
+        }
+
+        .var5 .logo-tagline {
+            color: #6B7280;
+            font-weight: 400;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Variation 6: Bold & Modern */
+        .var6 .logo-text {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6B46C1 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .var6 .logo-tagline {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Variation 7: Stacked with Line */
+        .var7 .logo-content {
+            position: relative;
+        }
+
+        .var7 .logo-content::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #6B46C1 0%, #3B82F6 100%);
+        }
+
+        .var7 .logo-text {
+            font-size: 3rem;
+            color: #1F2937;
+            margin-bottom: 1rem;
+        }
+
+        .var7 .logo-tagline {
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+
+        /* Variation 8: Monogram Style */
+        .var8 .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .var8 .monogram {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6B46C1 0%, #3B82F6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .var8 .logo-content .logo-text {
+            font-size: 2.5rem;
+            color: #1F2937;
+        }
+
+        .var8 .logo-content .logo-tagline {
+            color: #6B7280;
+        }
+
+        .description {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E5E7EB;
+            color: #6B7280;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        .usage-notes {
+            background: #F3F4F6;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .usage-notes h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1F2937;
+        }
+
+        .usage-notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .usage-notes li {
+            padding: 0.5rem 0;
+            color: #6B7280;
+        }
+
+        .usage-notes li::before {
+            content: '✓ ';
+            color: #10B981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AxionX Logo Mockups</h1>
+        <p class="subtitle">Explore different logo variations while maintaining simplicity and professionalism</p>
+
+        <div class="mockup-grid">
+            <!-- Variation 1: Original Current Style -->
+            <div class="mockup-card">
+                <div class="mockup-label">Current Style - Gradient Text</div>
+                <div class="logo-display white var1">
+                    <div class="logo-content">
+                        <div class="logo-text">axionx</div>
+                        <div class="logo-tagline">Day to Day AI</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Website headers, light backgrounds, professional documents<br>
+                    <strong>Key features:</strong> Lowercase, gradient effect, clean and modern
+                </div>
+            </div>
+
+            <!-- Variation 2: White on Gradient (Reversed) -->
+            <div class="mockup-card">
+                <div class="mockup-label">Reversed - White on Gradient</div>
+                <div class="logo-display gradient var2">
+                    <div class="logo-content">
+                        <div class="logo-text">axionx</div>
+                        <div class="logo-tagline">Day to Day AI</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Hero sections, social media, dark mode<br>
+                    <strong>Key features:</strong> High contrast, excellent visibility on coloured backgrounds
+                </div>
+            </div>
+
+            <!-- Variation 3: All Caps Contemporary -->
+            <div class="mockup-card">
+                <div class="mockup-label">All Caps - Contemporary</div>
+                <div class="logo-display white var3">
+                    <div class="logo-content">
+                        <div class="logo-text">AXIONX</div>
+                        <div class="logo-tagline">Day to Day AI</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Corporate presentations, letterheads, formal settings<br>
+                    <strong>Key features:</strong> Bold presence, authoritative feel, enterprise-ready
+                </div>
+            </div>
+
+            <!-- Variation 4: With Icon Badge -->
+            <div class="mockup-card">
+                <div class="mockup-label">Icon Badge Version</div>
+                <div class="logo-display white var4">
+                    <div class="logo-wrapper">
+                        <div class="logo-icon">AX</div>
+                        <div class="logo-content">
+                            <div class="logo-text">axionx</div>
+                            <div class="logo-tagline">Day to Day AI</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> App icons, favicon, profile pictures<br>
+                    <strong>Key features:</strong> Memorable badge, works at small sizes, versatile
+                </div>
+            </div>
+
+            <!-- Variation 5: Minimalist Thin -->
+            <div class="mockup-card">
+                <div class="mockup-label">Minimalist - Ultra Clean</div>
+                <div class="logo-display white var5">
+                    <div class="logo-content">
+                        <div class="logo-text">axionx</div>
+                        <div class="logo-tagline">DAY TO DAY AI</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Luxury feel, sophisticated materials, high-end branding<br>
+                    <strong>Key features:</strong> Thin weight, spacious, refined aesthetic
+                </div>
+            </div>
+
+            <!-- Variation 6: Bold Modern (Dark) -->
+            <div class="mockup-card">
+                <div class="mockup-label">Bold & Modern - Dark</div>
+                <div class="logo-display dark var6">
+                    <div class="logo-content">
+                        <div class="logo-text">axionx</div>
+                        <div class="logo-tagline">Day to Day AI</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Tech-forward materials, startup vibe, dynamic presence<br>
+                    <strong>Key features:</strong> Heavy weight, energetic, stands out
+                </div>
+            </div>
+
+            <!-- Variation 7: Stacked with Accent Line -->
+            <div class="mockup-card">
+                <div class="mockup-label">Stacked with Accent</div>
+                <div class="logo-display white var7">
+                    <div class="logo-content">
+                        <div class="logo-text">axionx</div>
+                        <div class="logo-tagline">Day to Day AI</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Vertical layouts, badges, certificates<br>
+                    <strong>Key features:</strong> Decorative line element, balanced composition
+                </div>
+            </div>
+
+            <!-- Variation 8: Monogram Circle -->
+            <div class="mockup-card">
+                <div class="mockup-label">Monogram Circle</div>
+                <div class="logo-display white var8">
+                    <div class="logo-wrapper">
+                        <div class="monogram">AX</div>
+                        <div class="logo-content">
+                            <div class="logo-text">axionx</div>
+                            <div class="logo-tagline">Day to Day AI</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong>Best for:</strong> Social media profiles, merchandise, alternative branding<br>
+                    <strong>Key features:</strong> Circular badge, iconic, great for small applications
+                </div>
+            </div>
+        </div>
+
+        <div class="usage-notes">
+            <h3>Logo Usage Guidelines</h3>
+            <ul>
+                <li><strong>Primary Logo:</strong> Use Variation 1 (gradient text) for most applications</li>
+                <li><strong>Dark Backgrounds:</strong> Use Variation 2 (white on gradient) or Variation 6</li>
+                <li><strong>Small Sizes:</strong> Use Variation 4 or 8 (with icons) for better legibility</li>
+                <li><strong>Print Materials:</strong> Variation 3 (all caps) works well for formal documents</li>
+                <li><strong>Digital Favicon:</strong> Use just the "AX" badge from Variation 4 or the circle from Variation 8</li>
+                <li><strong>Maintain Consistency:</strong> Choose 2-3 variations for your brand system and use consistently</li>
+                <li><strong>Minimum Size:</strong> Never display the logo smaller than 120px wide to maintain legibility</li>
+                <li><strong>Clear Space:</strong> Always maintain clear space around the logo equal to the height of the tagline text</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
